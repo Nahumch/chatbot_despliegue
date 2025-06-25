@@ -3,6 +3,8 @@ from langchain.chat_models import ChatOpenAI
 from PIL import Image
 import os
 
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
 st.set_page_config(
     page_title="Chatbot usando Langchain, OpenAI y Streamlit",
     page_icon="https://python.langchain.com/img/favicon.ico"
