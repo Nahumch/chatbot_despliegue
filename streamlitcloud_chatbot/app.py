@@ -3,6 +3,15 @@ from langchain.chat_models import ChatOpenAI
 from PIL import Image
 import os
 
+from pathlib import Path
+
+# Ruta absoluta al archivo logos.png desde el propio archivo app.py
+logo_path = Path(__file__).parent / "logos.png"
+
+# Verifica si el archivo existe y muestra ruta
+st.write("¿Logo existe?", logo_path.exists())
+st.write("Ruta completa del logo:", logo_path)
+
 st.set_page_config(
     page_title="Chatbot usando Langchain, OpenAI y Streamlit",
     page_icon="https://python.langchain.com/img/favicon.ico"
